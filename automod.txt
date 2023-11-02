@@ -1,0 +1,65 @@
+type: submission
+author:
+    account_age: '< 14 days'
+action: remove
+action_reason: 'AutoMod removal for an account less than 14 days old: if spam, delete'
+
+---
+type: link submission
+~domain: imgur.com
+action: filter
+action_reason: 'check if this link is spam or not'
+
+---
+type: comment
+author:
+    flair_css_class: 'REP'
+action: filter
+action_reason: 'check if quality comment or just advertisement'
+
+---
+type: comment
+body (includes): ['Monat']
+action: filter
+action_reason: 'contains Monat mention'
+
+---
+reports: 3
+action: filter
+
+---
+type: comment
+author:
+    account_age: < 7 days
+action: filter
+action_reason: 'check for spam comments'
+
+---
+type: submission
+moderators_exempt: true
+body (includes): [supplements, vitamins, collagen, biotin]
+comment: 'We noticed you may be asking a question about taking supplements. Currently there is no evidence that supports any positive hair effects from taking supplements when you do not have nutrient deficiencies. (Source:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5315033/)  If you believe that you may have a nutrient deficiency please consult with a medical professional.'
+
+---
+type: submission
+moderators_exempt: true
+body (includes): [overload]
+comment: 'We noticed you may be asking a question about protein overload. Currently there is no scientific evidence that supports the concept of protein overload.'
+
+---
+type: submission
+moderators_exempt: true
+body (includes): [bald, thinning, hairfall, 'hair fall']
+comment: 'We noticed you may be asking about hair loss or thinning. Please see a doctor as this is a medical concern, not a haircare concern.'
+
+---
+type: submission
+moderators_exempt: true
+body (includes): [oiling, jojoba, rosemary, ginseng]
+comment: 'We noticed you may be asking topicals that aid in hair growth. There are currently no studies truly validating the use of OTC topicals for hair growth. Current research tends to focus on androgenetic alopecia, not just people who want to grow more hair. If you think you may be experiencing androgenetic alopecia, or male pattern baldness, or any other kind of hair loss please see a doctor.'
+
+---
+type: submission
+moderators_exempt: true
+body (includes): [grey, gray, reversing, reversal]
+comment: 'We noticed you may be asking about trying to stop grey hair from growing. We are really sorry, but this is usually just genetics. If you think it may be a bigger issue, see a doctor.'
