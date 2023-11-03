@@ -11,28 +11,8 @@ action: filter
 action_reason: 'check if this link is spam or not'
 
 ---
-type: comment
-author:
-    flair_css_class: 'REP'
-action: filter
-action_reason: 'check if quality comment or just advertisement'
-
----
-type: comment
-body (includes): ['Monat']
-action: filter
-action_reason: 'contains Monat mention'
-
----
 reports: 3
 action: filter
-
----
-type: comment
-author:
-    account_age: < 7 days
-action: filter
-action_reason: 'check for spam comments'
 
 ---
 type: submission
@@ -49,17 +29,48 @@ comment: 'We noticed you may be asking a question about protein overload. Curren
 ---
 type: submission
 moderators_exempt: true
-body (includes): [bald, thinning, hairfall, 'hair fall']
+body (includes): [bald, thin, thinning, hairfall, 'hair fall']
 comment: 'We noticed you may be asking about hair loss or thinning. Please see a doctor as this is a medical concern, not a haircare concern.'
 
 ---
 type: submission
 moderators_exempt: true
 body (includes): [oiling, jojoba, rosemary, ginseng]
-comment: 'We noticed you may be asking topicals that aid in hair growth. There are currently no studies truly validating the use of OTC topicals for hair growth. Current research tends to focus on androgenetic alopecia, not just people who want to grow more hair. If you think you may be experiencing androgenetic alopecia, or male pattern baldness, or any other kind of hair loss please see a doctor.'
+comment: 'We noticed you may be asking about topicals that are marketed to aid in hair growth. There are currently no studies validating the use of such topicals for hair growth. Current research tends to focus on androgenetic alopecia, not people who want to grow more hair in general. If you think you may be experiencing androgenetic alopecia, or male pattern baldness, or any other kind of hair loss please see a doctor.'
 
 ---
 type: submission
 moderators_exempt: true
 body (includes): [grey, gray, reversing, reversal]
 comment: 'We noticed you may be asking about trying to stop grey hair from growing. We are really sorry, but this is usually just genetics. If you think it may be a bigger issue, see a doctor.'
+
+---
+type: submission
+moderators_exempt: true
+body (includes): [dandruff, flake, itchy, flaking]
+comment: 'We noticed you may be asking about dandruff. This is a fungal infection and should be treated by a physician. Please consult with a doctor to find out if you have it or not and how to treat.'
+
+---
+type: comment
+author:
+    flair_css_class: 'REP'
+action: filter
+action_reason: 'check if quality comment or just advertisement'
+
+---
+type: comment
+body (includes): ['Monat']
+action: filter
+action_reason: 'contains Monat mention'
+
+---
+type: comment
+body (includes): ['hard water']
+action: filter
+action_reason: 'please do not diagnose other users water'
+
+---
+type: comment
+body (includes): [oiling, jojoba, rosemary, ginseng]
+action: filter
+action_reason: 'please provide a source'
