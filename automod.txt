@@ -71,6 +71,6 @@ action_reason: 'please do not diagnose other users water'
 
 ---
 type: comment
-body (includes): [oiling, jojoba, rosemary, ginseng]
+body (includes): [oil, oiling, jojoba, rosemary, ginseng]
 action: filter
 action_reason: 'please provide a source'
