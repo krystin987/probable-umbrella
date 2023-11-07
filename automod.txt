@@ -35,7 +35,7 @@ comment: "We noticed you may be asking about hair loss or thinning. Please see a
 ---
 type: submission
 moderators_exempt: true
-body (includes): [" oil ", "oiling", "jojoba", "rosemary", "ginseng", "-oil "]
+body (includes): ["jojoba", "rosemary", "ginseng"]
 action: filter
 action_reason: "oils"
 comment: "We noticed you may be asking about topicals that are marketed to aid in hair growth. There are currently no studies validating the use of such topicals for hair growth. Current research tends to focus on androgenetic alopecia, not people who want to grow more hair in general. If you think you may be experiencing androgenetic alopecia, or male pattern baldness, or any other kind of hair loss please see a doctor."
