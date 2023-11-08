@@ -3,33 +3,43 @@ author:
     account_age: "< 14 days"
 action: remove
 action_reason: "AutoMod removal for an account less than 14 days old: if spam, delete"
+comment: "We're sorry, your account is too young to post. We require 14 days."
 
 ---
 type: link submission
+moderators_exempt: true
 ~domain: imgur.com
 action: filter
 action_reason: "check if this link is spam or not"
 
 ---
 reports: 3
+moderators_exempt: true
 action: filter
+action_reason: "3 reports"
 
 ---
 type: submission
 moderators_exempt: true
 body (includes): ["supplements", "vitamins", "collagen", "biotin"]
+action: filter
+action_reason: "supplements"
 comment: "We noticed you may be asking a question about taking supplements. Currently there is no evidence that supports any positive hair effects from taking supplements when you do not have nutrient deficiencies. (Source:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5315033/)  If you believe that you may have a nutrient deficiency please consult with a medical professional."
 
 ---
 type: submission
 moderators_exempt: true
 body (includes): [overload]
+action: filter
+action_reason: "protein overload"
 comment: "We noticed you may be asking a question about protein overload. Currently there is no scientific evidence that supports the concept of protein overload."
 
 ---
 type: submission
 moderators_exempt: true
 body (includes): ["bald", " thin ", " thinning ", "hairfall", "hair fall", "hair loss"]
+action: filter
+action_reason: "bald/thinning"
 comment: "We noticed you may be asking about hair loss or thinning. Please see a doctor as this is a medical concern, not a haircare concern."
 
 ---
@@ -43,17 +53,19 @@ comment: "We noticed you may be asking about topicals that are marketed to aid i
 ---
 type: submission
 moderators_exempt: true
-body (includes): ["reverse grey ", "reverse gray", "reversing grey", "reversing gray", "going grey", "going gray", "grey hair", "gray hair", "greying", "graying", "greys", "grays", "grey hair reversal", "gray hair reversal"]
+body (includes): ["reverse grey ", "reverse gray", "reversing grey", "reversing gray", "going grey", "going gray", "grey hair", "gray hair", "greying", "graying", "greys", "grays", "grey hair reversal", "gray hair reversal", " gray ", " grey "]
+action: filter
 comment: "We noticed you may be asking about greying hair. Unfortunately, this is usually related to genetics. If you think it may be a bigger issue, see a doctor."
 
 ---
 type: submission
 moderators_exempt: true
 body (includes): ["dandruff", "flake", "itchy", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis"]
-comment: "We noticed you may be asking about dandruff or a related scalp infection. This is a fungal infection, or similar, and should be treated by a physician. Please consult with a doctor to find out and how to treat."
+comment: "We noticed you may be asking about dandruff or a related scalp infection. This could be a fungal infection, or similar, and should be treated by a physician. Please consult with a doctor to find out and how to treat."
 
 ---
 type: comment
+moderators_exempt: true
 author:
     flair_css_class: "REP"
 action: filter
@@ -64,21 +76,28 @@ type: comment
 body (includes): ["Monat"]
 action: filter
 action_reason: "contains Monat mention"
+comment: "MLM advertising is not allowed"
 
 ---
 type: comment
+moderators_exempt: true
 body (includes): ["hard water", "water softener"]
 action: filter
-action_reason: "Water is too complicated and local a topic to properly advise other users on over the internet. Water hardness is not a haircare topic, it's a local infrastructure topic."
+action_reason: "hard water"
+comment: "We noticed you mentioned water quality. Water is too complicated and local a topic to properly advise other users on over the internet. Water hardness is not a haircare topic, it's a local infrastructure topic."
 
 ---
 type: comment
+moderators_exempt: true
 body (includes): ["jojoba", "rosemary", "ginseng"]
 action: filter
-action_reason: "Please do not give other users advice on oils, this is not a DIY sub."
+action_reason: "oils"
+comment: "Please do not give other users advice on oils, this is not a DIY sub."
 
 ---
 type: comment
+moderators_exempt: true
 body (includes): ["dandruff", "flake", "itchy", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis"]
 action: filter
-action_reason: "Please do not try to advise other users on medical issues."
+action_reason: "dandruff or related, medical issue"
+comment: "We noticed you may be asking about dandruff or a related scalp infection. This could be a fungal infection, or similar, and should be treated by a physician. Please consult with a doctor to find out and how to treat or advise other users to do so. Never try to diagnose a medical issue over the internet."
