@@ -1,16 +1,9 @@
 type: submission
 author:
     account_age: "< 14 days"
+comment: "We're sorry, your account is too young to post. We require 14 days."
 action: remove
 action_reason: "AutoMod removal for an account less than 14 days old: if spam, delete"
-comment: "We're sorry, your account is too young to post. We require 14 days."
-
----
-type: link submission
-moderators_exempt: true
-~domain: imgur.com
-action: filter
-action_reason: "check if this link is spam or not"
 
 ---
 reports: 3
@@ -21,47 +14,62 @@ action_reason: "3 reports"
 ---
 type: submission
 moderators_exempt: true
-body (includes): ["supplements", "vitamins", "collagen", "biotin"]
+body+title (includes): ["supplements", "vitamins", "collagen", "biotin"]
+comment: "We noticed you may be asking a question about taking supplements. Currently there is no evidence that supports any positive hair effects from taking supplements when you do not have nutrient deficiencies. (Source:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5315033/)  If you believe that you may have a nutrient deficiency please consult with a medical professional."
 action: filter
 action_reason: "supplements"
-comment: "We noticed you may be asking a question about taking supplements. Currently there is no evidence that supports any positive hair effects from taking supplements when you do not have nutrient deficiencies. (Source:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5315033/)  If you believe that you may have a nutrient deficiency please consult with a medical professional."
 
 ---
 type: submission
 moderators_exempt: true
-body (includes): [overload]
+body+title (includes): [overload]
+comment: "We noticed you may be asking a question about protein overload. Currently there is no scientific evidence that supports the concept of protein overload."
 action: filter
 action_reason: "protein overload"
-comment: "We noticed you may be asking a question about protein overload. Currently there is no scientific evidence that supports the concept of protein overload."
 
 ---
 type: submission
 moderators_exempt: true
-body (includes): ["bald", " thin ", " thinning ", "hairfall", "hair fall", "hair loss"]
+body+title (includes): ["bald", " thin ", " thinning ", "hairfall", "hair fall", "hair loss", "minoxidil", "recede", "receding"]
+comment: "We noticed you may be asking about hair loss or thinning. Please see a doctor as this is a medical concern, not a haircare concern."
 action: filter
 action_reason: "bald/thinning"
-comment: "We noticed you may be asking about hair loss or thinning. Please see a doctor as this is a medical concern, not a haircare concern."
 
 ---
 type: submission
 moderators_exempt: true
-body (includes): ["jojoba", "rosemary", "ginseng"]
+body+title (includes): ["jojoba", "rosemary", "ginseng", "castor", "coconut", "essential oil"]
+comment: "We noticed you may be asking about topicals that are marketed to aid in hair growth. There are currently no studies validating the use of such topicals for hair growth. Current research tends to focus on androgenetic alopecia, not people who want to grow more hair in general. If you think you may be experiencing androgenetic alopecia, or male pattern baldness, or any other kind of hair loss please see a doctor."
 action: filter
 action_reason: "oils"
-comment: "We noticed you may be asking about topicals that are marketed to aid in hair growth. There are currently no studies validating the use of such topicals for hair growth. Current research tends to focus on androgenetic alopecia, not people who want to grow more hair in general. If you think you may be experiencing androgenetic alopecia, or male pattern baldness, or any other kind of hair loss please see a doctor."
 
 ---
 type: submission
 moderators_exempt: true
-body (includes): ["reverse grey ", "reverse gray", "reversing grey", "reversing gray", "going grey", "going gray", "grey hair", "gray hair", "greying", "graying", "greys", "grays", "grey hair reversal", "gray hair reversal", " gray ", " grey "]
-action: filter
+body+title (includes): ["reverse grey ", "reverse gray", "reversing grey", "reversing gray", "going grey", "going gray", "grey hair", "gray hair", "greying", "graying", "greys", "grays", "grey hair reversal", "gray hair reversal", " gray ", " grey "]
 comment: "We noticed you may be asking about greying hair. Unfortunately, this is usually related to genetics. If you think it may be a bigger issue, see a doctor."
+action: filter
+action_reason: "graying/greying"
 
 ---
 type: submission
 moderators_exempt: true
-body (includes): ["dandruff", "flake", "itchy", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis"]
+body+title (includes): ["dandruff", "flake", "itchy", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm"]
 comment: "We noticed you may be asking about dandruff or a related scalp infection. This could be a fungal infection, or similar, and should be treated by a physician. Please consult with a doctor to find out and how to treat."
+action: filter
+action_reason: "dandruff"
+
+---
+type: submission
+moderators_exempt: true
+body+title (includes): ["sls", "sulfate", "sulfates", "cocamidopropyl", "formaldehyde"]
+comment: "We noticed you may be asking about about ingredients that some influencers have branded as 'harmful' or 'bad'. Please note that we don't spread chemophobia in this sub and none of these ingredients have actually been found to be harmful. If you have any studies to share, message the mods."
+
+---
+type: submission
+moderators_exempt: true
+body+title (includes): ["moisture", "moisturize", "moisturizing"]
+comment: "We noticed you're asking about moisturizing hair. Please view [this archived post](https://www.reddit.com/r/HaircareScience/comments/lmmlcn/does_water_actually_make_hair_feel_moisturized/) on this topic"
 
 ---
 type: comment
@@ -82,22 +90,35 @@ comment: "MLM advertising is not allowed"
 type: comment
 moderators_exempt: true
 body (includes): ["hard water", "water softener"]
+comment: "We noticed you mentioned water quality. Water is too complicated and local a topic to properly advise other users on over the internet. Water hardness is not a haircare topic, it's a local infrastructure topic."
 action: filter
 action_reason: "hard water"
-comment: "We noticed you mentioned water quality. Water is too complicated and local a topic to properly advise other users on over the internet. Water hardness is not a haircare topic, it's a local infrastructure topic."
 
 ---
 type: comment
 moderators_exempt: true
-body (includes): ["jojoba", "rosemary", "ginseng"]
+body (includes): ["jojoba", "rosemary", "ginseng", "castor", "coconut", "essential oil"]
+comment: "Please do not give other users advice on oils, this is not a DIY sub."
 action: filter
 action_reason: "oils"
-comment: "Please do not give other users advice on oils, this is not a DIY sub."
 
 ---
 type: comment
 moderators_exempt: true
-body (includes): ["dandruff", "flake", "itchy", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis"]
+body (includes): ["dandruff", "flake", "itchy", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm"]
+comment: "We noticed you may be asking about dandruff or a related scalp infection. This could be a fungal infection, or similar, and should be treated by a physician. Please consult with a doctor to find out and how to treat or advise other users to do so. Never try to diagnose a medical issue over the internet."
 action: filter
 action_reason: "dandruff or related, medical issue"
-comment: "We noticed you may be asking about dandruff or a related scalp infection. This could be a fungal infection, or similar, and should be treated by a physician. Please consult with a doctor to find out and how to treat or advise other users to do so. Never try to diagnose a medical issue over the internet."
+
+---
+type: comment
+moderators_exempt: true
+body (includes): ["sls", "sulfate", "sulfates", "cocamidopropyl", "formaldehyde"]
+comment: "We noticed you may be asking about about ingredients that some influencers have branded as 'harmful' or 'bad'. Please note that we don't spread chemophobia in this sub and none of these ingredients have actually been found to be harmful. If you have any studies to share, message the mods."
+
+---
+type: link submission
+moderators_exempt: true
+~domain: ["imgur.com", "reddit.com"]
+action: filter
+action_reason: "check if this link is spam or not"
