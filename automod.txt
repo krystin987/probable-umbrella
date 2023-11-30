@@ -41,7 +41,7 @@ comment: "We noticed you may be asking a question about protein overload. Curren
 ---
 type: submission
 moderators_exempt: true
-body+title (includes): ["bald", "balding", " thinning hair", "hairfall", "hair fall", "hair loss", "minoxidil", "recede", "receding", "finasteride"]
+body+title (includes): ["bald", "balding", "hair thinning", "thinning hair", "hairfall", "hair fall", "hair loss", "minoxidil", "recede", "receding", "finasteride"]
 comment: "We noticed you may be asking about hair loss or thinning. Posts about hair loss are not allowed. Please see a doctor as this is a medical concern, not a haircare concern."
 action: remove
 action_reason: "bald/thinning"
