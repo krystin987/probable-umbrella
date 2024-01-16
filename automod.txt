@@ -28,7 +28,7 @@ comment: "We noticed you may be asking a question about taking supplements. Curr
 ---
 type: submission
 moderators_exempt: true
-body+title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help"]
+title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help", "recommend", "bad", "ok", "okay", "treatment", "opinion", "keratin", "k18", "friz", "wrong", "problem"]
 action: filter
 comment: "Please post general requests for advice in the weekly haircare megathread. Simply go back to the mainpage and filter by 'hot' and it should be the top stickied post. Otherwise, try /r/hair for personal advice."
 
@@ -49,8 +49,8 @@ action_reason: "bald/thinning"
 ---
 type: submission
 moderators_exempt: true
-body+title (includes): ["jojoba", "rosemary", "ginseng", "castor", "coconut", "essential oil"]
-comment:  "We notice you've mentioned a topical or oil that has gained popularity in influencer circles. Please note that there are not currently any studies that properly confirm the efficacy of these products for hair growth. Many users report issues with very increased greasiness/oily hair from using these products as well as itchiness and sensitivity. Use these with caution, we do not recommend them."
+body+title (includes): ["jojoba", "rosemary", "ginseng", "castor", "essential oil"]
+comment:  "We notice you've mentioned a topical or oil that has gained popularity in influencer circles. Please note that there are not currently any studies that properly confirm the efficacy of these products for hair growth. Many users report issues with very increased greasiness/oily hair from using these products as well as itchiness and sensitivity. Use these with caution, we do not recommend them. If your post is not related to this automod comment, please disregard."
 
 ---
 type: submission
@@ -61,8 +61,8 @@ comment: "We noticed you may be asking about greying hair. Unfortunately, this i
 ---
 type: submission
 moderators_exempt: true
-body+title (includes): ["dandruff", "flake","itch", "itchy", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm"]
-comment: "We noticed you mentioned dandruff or a related scalp infection. This could be a fungal infection or similar and should be treated by a physician. Please consult with a doctor to find out and how to treat. Over the counter products marketed by companies are not sufficient to treat such an infection and the presence of fungus should be confirmed by a physician before treatment. We do not recommend self treating."
+body+title (includes): ["dandruff", "flake","flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm"]
+comment: "We noticed you mentioned dandruff or a related scalp infection. This could be a fungal infection or similar and should be treated by a physician. Please consult with a doctor to find out and how to treat. Over the counter products marketed by companies are not sufficient to treat such an infection and the presence of fungus should be confirmed by a physician before treatment. We do not recommend self treating. If your post is not about dandruff, please disregard."
 
 ---
 type: submission
@@ -74,7 +74,7 @@ comment: "We noticed you're asking about moisturizing hair. Please view [this ar
 type: submission
 moderators_exempt: true
 body+title (includes): ["sulfate-free", "sulfate free", "harmful ingredient", "cocamidopropyl", "formaldehyde", "sls-free", "sls free"]
-comment: "We noticed you mentioned ingredients that some influencers have branded as 'harmful' or 'bad'. Please note that we don't spread chemophobia in this sub and none of these ingredients have actually been found to be harmful. If you have any studies to share, message the mods."
+comment: "We noticed you mentioned ingredients that some influencers have branded as 'harmful' or 'bad'. Please note that we try not to spread chemophobia in this sub and none of these ingredients have actually been found to be harmful. If you have any studies to share, message the mods. If your post is not related to this comment, please disregard."
 
 ---
 type: comment
@@ -102,20 +102,20 @@ action_reason: "hard water"
 ---
 type: comment
 moderators_exempt: true
-body (includes): ["jojoba", "rosemary", "ginseng", "castor", "coconut", "essential oil"]
-comment: "We notice you've mentioned a topical or oil that has gained popularity in influencer circles. Please note that there are not currently any studies that properly confirm the efficacy of these products for hair growth. Many users report issues with very increased greasiness/oily hair from using these products as well as itchiness and sensitivity. Use these with caution, we do not recommend them."
+body (includes): ["jojoba", "rosemary", "ginseng", "castor", "essential oil"]
+comment: "We notice you've mentioned a topical or oil that has gained popularity in influencer circles. Please note that there are not currently any studies that properly confirm the efficacy of these products for hair growth. Many users report issues with very increased greasiness/oily hair from using these products as well as itchiness and sensitivity. Use these with caution, we do not recommend them. If your comment is not related to this automod comment, please disregard."
 
 ---
 type: comment
 moderators_exempt: true
-body (includes): ["dandruff", "flake", "itch", "itchy", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm"]
-comment: "We noticed you mentioned dandruff or a related scalp infection. This could be a fungal infection or similar and should be treated by a physician. Please consult with a doctor to find out and how to treat. Over the counter products marketed by companies are not sufficient to treat such an infection and the presence of fungus should be confirmed by a physician before treatment. We do not recommend self treating."
+body (includes): ["dandruff", "flake","flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm"]
+comment: "We noticed you mentioned dandruff or a related scalp infection. This could be a fungal infection or similar and should be treated by a physician. Please consult with a doctor to find out and how to treat. Over the counter products marketed by companies are not sufficient to treat such an infection and the presence of fungus should be confirmed by a physician before treatment. We do not recommend self treating. If your comment is not about dandruff, please disregard."
 
 ---
 type: comment
 moderators_exempt: true
 body (includes): ["sulfate-free", "sulfate free", "harmful ingredient", "cocamidopropyl", "formaldehyde", "sls-free", "sls free"]
-comment: "We noticed you mentioned ingredients that some influencers have branded as 'harmful' or 'bad'. Please note that we don't spread chemophobia in this sub and none of these ingredients have actually been found to be harmful. If you have any studies to share, message the mods."
+comment: "We noticed you mentioned ingredients that some influencers have branded as 'harmful' or 'bad'. Please note that we try not to spread chemophobia in this sub and none of these ingredients have actually been found to be harmful. If you have any studies to share, message the mods. If your comment is not related to this topic, please disregard."
 ---
 
 type: comment
