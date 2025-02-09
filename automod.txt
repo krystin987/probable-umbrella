@@ -9,15 +9,16 @@ set_spoiler: true
 type: submission
 author:
     account_age: "< 14 days"
-comment: "We're sorry, your account is too young to post. We require 14 days."
+    comment_karma: "< 10"
+    post_karma: "< 10"
 action: remove
-action_reason: "AutoMod removal for an account less than 14 days old: if spam, delete"
+action_reason: "Removed due to low activity or new account."
 
 ---
+type: submission
 reports: 3
-moderators_exempt: true
-action: filter
-action_reason: "3 reports"
+action: remove
+action_reason: "Automatically removed after 3 reports."
 
 ---
 type: submission
@@ -28,9 +29,9 @@ comment: "We noticed you may be asking a question about taking supplements. Curr
 ---
 type: submission
 moderators_exempt: true
-body+title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help"]
+title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help", "recommend", "bad", "ok", "okay", "treatment", "opinion", "keratin", "k18", "friz", "wrong", "problem"]
 action: filter
-comment: "Please post general requests for advice in the weekly haircare megathread. Simply go back to the mainpage and filter by 'hot' and it should be the top stickied post. Otherwise, try /r/hair for personal advice."
+comment: "Please post requests for personal advice in the weekly haircare megathread. Simply go back to the mainpage and filter by 'hot' and it should be the top stickied post."
 
 ---
 type: submission
@@ -41,40 +42,55 @@ comment: "We noticed you may be asking a question about protein overload. Curren
 ---
 type: submission
 moderators_exempt: true
-body+title (includes): ["bald", "balding", " thinning hair", "hairfall", "hair fall", "hair loss", "minoxidil", "recede", "receding", "finasteride"]
+body+title (includes): ["bald", "balding", "hair thinning", "thinning hair", "hairfall", "hair fall", "hair loss", "minoxidil", "recede", "receding", "finasteride"]
 comment: "We noticed you may be asking about hair loss or thinning. Posts about hair loss are not allowed. Please see a doctor as this is a medical concern, not a haircare concern."
 action: remove
 action_reason: "bald/thinning"
-
 ---
 type: submission
 moderators_exempt: true
-body+title (includes): ["jojoba", "rosemary", "ginseng", "castor", "coconut", "essential oil"]
-comment:  "We notice you've mentioned a topical or oil that has gained popularity in influencer circles. Please note that there are not currently any studies that properly confirm the efficacy of these products for hair growth. Many users report issues with very increased greasiness/oily hair from using these products as well as itchiness and sensitivity. Use these with caution, we do not recommend them."
+body+title (includes): ["hard water", "soft water", "water hardness", "water softener", "tap water", "filtered water", "chlorine", "fluoride", "lime scale", "shower filter", "water filter", "pH balance in water", "calcium buildup", "mineral deposits", "well water", "water damage", "dry hair from water", "greasy hair from water"]
+comment: "We noticed you mentioned water quality. Please do not recommend infrastructure solutions to hard water like softeners or filters, as water quality is a local infrastructure topic, not a haircare topic."
+
+---
+type: any
+moderators_exempt: true
+body+title (includes): ["jojoba", "rosemary", "ginseng", "castor", "essential oil", "argan oil", "tea tree oil", "peppermint oil"]
+action: filter
+action_reason: "Essential oils are flagged due to lack of evidence for hair growth efficacy."
 
 ---
 type: submission
 moderators_exempt: true
 body+title (includes): ["reverse grey ", "reverse gray", "reversing grey", "reversing gray", "going grey", "going gray", "grey hair", "gray hair", "greying", "graying", "greys", "grays", "grey hair reversal", "gray hair reversal", " gray ", " grey "]
+action: filter
 comment: "We noticed you may be asking about greying hair. Unfortunately, this is usually related to genetics. If you think it may be a bigger issue, see a doctor."
 
 ---
-type: submission
+type: any
 moderators_exempt: true
-body+title (includes): ["dandruff", "flake","itch", "itchy", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm"]
-comment: "We noticed you mentioned dandruff or a related scalp infection. This could be a fungal infection or similar and should be treated by a physician. Please consult with a doctor to find out and how to treat. Over the counter products marketed by companies are not sufficient to treat such an infection and the presence of fungus should be confirmed by a physician before treatment. We do not recommend self treating."
+body+title (includes): ["dandruff", "flake", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm", "scalp infection", "fungal scalp", "ketoconazole"]
+action: filter
+action_reason: "Dandruff and scalp infections are medical issues. Please consult a doctor."
 
 ---
 type: submission
 moderators_exempt: true
 body+title (includes): ["moisture", "moisturize", "moisturizing"]
-comment: "We noticed you're asking about moisturizing hair. Please view [this archived post](https://www.reddit.com/r/HaircareScience/comments/lmmlcn/does_water_actually_make_hair_feel_moisturized/) on this topic"
+action: filter
+action_reason: "Filtered for moisture-related topic. Refer to subreddit rules."
+---
+type: any
+moderators_exempt: true
+body+title (includes): ["sulfate-free", "sulfate free", "harmful ingredient", "cocamidopropyl", "formaldehyde", "parabens", "SLS", "SLES"]
+action: filter
+action_reason: "Ingredient concerns flagged. Please note this subreddit discourages chemophobia without evidence."
 
 ---
-type: submission
+type: comment
 moderators_exempt: true
-body+title (includes): ["sulfate-free", "sulfate free", "harmful ingredient", "cocamidopropyl", "formaldehyde", "sls-free", "sls free"]
-comment: "We noticed you mentioned ingredients that some influencers have branded as 'harmful' or 'bad'. Please note that we don't spread chemophobia in this sub and none of these ingredients have actually been found to be harmful. If you have any studies to share, message the mods."
+body (includes): ["hard water", "soft water", "water hardness", "water softener", "tap water", "filtered water", "chlorine", "fluoride", "lime scale", "shower filter", "water filter", "pH balance in water", "calcium buildup", "mineral deposits", "well water", "water damage", "dry hair from water", "greasy hair from water"]
+comment: "We noticed you mentioned water quality. Please do not recommend infrastructure solutions to hard water like softeners or filters, as water quality is a local infrastructure topic, not a haircare topic."
 
 ---
 type: comment
@@ -85,47 +101,13 @@ action: filter
 action_reason: "check if quality comment or just advertisement"
 
 ---
-type: comment
-body (includes): ["Monat"]
-comment: "MLM advertising is not allowed"
-action: filter
-action_reason: "contains Monat mention"
-
----
-type: comment
-moderators_exempt: true
-body (includes): ["hard water", "water softener"]
-comment: "We noticed you mentioned water quality. Water is too complicated and local a topic to properly advise other users on over the internet. Water hardness is not a haircare topic, it's a local infrastructure topic."
-action: filter
-action_reason: "hard water"
-
----
-type: comment
-moderators_exempt: true
-body (includes): ["jojoba", "rosemary", "ginseng", "castor", "coconut", "essential oil"]
-comment: "We notice you've mentioned a topical or oil that has gained popularity in influencer circles. Please note that there are not currently any studies that properly confirm the efficacy of these products for hair growth. Many users report issues with very increased greasiness/oily hair from using these products as well as itchiness and sensitivity. Use these with caution, we do not recommend them."
-
----
-type: comment
-moderators_exempt: true
-body (includes): ["dandruff", "flake", "itch", "itchy", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm"]
-comment: "We noticed you mentioned dandruff or a related scalp infection. This could be a fungal infection or similar and should be treated by a physician. Please consult with a doctor to find out and how to treat. Over the counter products marketed by companies are not sufficient to treat such an infection and the presence of fungus should be confirmed by a physician before treatment. We do not recommend self treating."
-
----
-type: comment
-moderators_exempt: true
-body (includes): ["sulfate-free", "sulfate free", "harmful ingredient", "cocamidopropyl", "formaldehyde", "sls-free", "sls free"]
-comment: "We noticed you mentioned ingredients that some influencers have branded as 'harmful' or 'bad'. Please note that we don't spread chemophobia in this sub and none of these ingredients have actually been found to be harmful. If you have any studies to share, message the mods."
----
-
-type: comment
-moderators_exempt: true
-body (includes): ["moisture", "moisturize", "moisturizing"]
-comment: "We noticed you mentioned moisturizing hair. Please view [this archived post](https://www.reddit.com/r/HaircareScience/comments/lmmlcn/does_water_actually_make_hair_feel_moisturized/) on this topic."
+type: any
+body (includes): ["Monat", "arbonne", "itworks", "nuskin", "essential oils", "young living"]
+action: remove
+action_reason: "MLM or affiliate content is not allowed."
 
 ---
 type: link submission
-moderators_exempt: true
-~domain: ["imgur.com", "reddit.com"]
-action: filter
-action_reason: "check if this link is spam or not, or if it belongs in the megathread"
+url (regex): ["\\?ref=", "&utm_", "\\.php\\?id="]
+action: remove
+action_reason: "Possible affiliate or tracking link detected."
