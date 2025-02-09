@@ -23,8 +23,8 @@ action_reason: "Automatically removed after 3 reports."
 ---
 type: submission
 moderators_exempt: true
-body+title (includes): ["supplements", "vitamins", "collagen", "biotin"]
-comment: "We noticed you may be asking a question about taking supplements. Currently there is no evidence that supports any positive hair effects from taking supplements when you do not have nutrient deficiencies. (Source:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5315033/)  If you believe that you may have a nutrient deficiency please consult with a medical professional."
+body+title (includes): ["supplements", "vitamins", "collagen", "biotin", "multivitamin", "saw palmetto", "multi-vitamin", "vitamins"]
+comment: "We noticed you may be asking a question about taking supplements. Currently there is no evidence that supports any positive hair effects from taking supplements when you do not have nutrient deficiencies. ([Source](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5315033/))  If you believe that you may have a nutrient deficiency please consult with a medical professional."
 
 ---
 type: submission
