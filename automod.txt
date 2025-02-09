@@ -1,15 +1,18 @@
 ---
+# Photo links
 type: link submission
 url (includes-word, regex): ['[\.=](jpe?g|png|gif|webp)', 'i\.redd\.it', 'reddit\.com/gallery/', 'imgur\.com', 'ibb\.co', 'prnt\.sc', 'postimg\.cc', 'imgbox\.com', 'imageupload\.io', 'instagram\.com', 'instagr\.am', 'fbcdn\.net', '(flickr\.com|flic.kr)', 'giphy\.com', 'gfycat\.com', 'media\.tumblr\.com']
 set_spoiler: true
 action: filter
 message: "Hi, your photo submission is under review. If it complies with our rules it will be approved. Please review our rules especially 2, 8, and 10"
 ---
+# Gallery links
 type: gallery submission
 set_spoiler: true
 action: filter
 message: "Hi, your photo submission is under review. If it complies with our rules it will be approved. Please review our rules especially 2, 8, and 10"
 ---
+# Removed due to low activity or new account.
 type: submission
 author:
     account_age: "< 14 days"
@@ -19,18 +22,21 @@ action: remove
 action_reason: "Removed due to low activity or new account."
 
 ---
+# Auto-remove via reports
 type: submission
 reports: 3
 action: remove
 action_reason: "Automatically removed after 3 reports."
 
 ---
+# Supplements
 type: submission
 moderators_exempt: true
-body+title (includes): ["supplements", "vitamins", "collagen", "biotin", "multivitamin", "saw palmetto", "multi-vitamin", "vitamins"]
-comment: "We noticed you may be asking a question about taking supplements. Currently there is no evidence that supports any positive hair effects from taking supplements when you do not have nutrient deficiencies. ([Source](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5315033/))  If you believe that you may have a nutrient deficiency please consult with a medical professional."
+body+title (includes): ["supplements", "vitamins", "collagen", "biotin"]
+comment: "We noticed you may be asking a question about taking supplements. Currently there is no evidence that supports any positive hair effects from taking supplements when you do not have nutrient deficiencies. (Source:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5315033/)  If you believe that you may have a nutrient deficiency please consult with a medical professional."
 
 ---
+# Advice
 type: submission
 moderators_exempt: true
 title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help", "recommend", "bad", "ok", "okay", "treatment", "opinion", "keratin", "k18", "friz", "wrong", "problem"]
@@ -38,12 +44,14 @@ action: filter
 comment: "Please post requests for personal advice in the weekly haircare megathread. Simply go back to the mainpage and filter by 'hot' and it should be the top stickied post."
 
 ---
+# Protein Overload
 type: submission
 moderators_exempt: true
 body+title (includes): ["overload"]
 comment: "We noticed you may be asking a question about protein overload. Currently there is no scientific evidence that supports the concept of protein overload."
 
 ---
+# Hair loss
 type: submission
 moderators_exempt: true
 body+title (includes): ["bald", "balding", "hair thinning", "thinning hair", "hairfall", "hair fall", "hair loss", "minoxidil", "recede", "receding", "finasteride"]
@@ -51,12 +59,14 @@ comment: "We noticed you may be asking about hair loss or thinning. Posts about 
 action: remove
 action_reason: "bald/thinning"
 ---
+# Hard Water
 type: submission
 moderators_exempt: true
 body+title (includes): ["hard water", "soft water", "water hardness", "water softener", "tap water", "filtered water", "chlorine", "fluoride", "lime scale", "shower filter", "water filter", "pH balance in water", "calcium buildup", "mineral deposits", "well water", "water damage", "dry hair from water", "greasy hair from water"]
 comment: "We noticed you mentioned water quality. Please do not recommend infrastructure solutions to hard water like softeners or filters, as water quality is a local infrastructure topic, not a haircare topic."
 
 ---
+# Essential Oils
 type: any
 moderators_exempt: true
 body+title (includes): ["jojoba", "rosemary", "ginseng", "castor", "essential oil", "argan oil", "tea tree oil", "peppermint oil"]
@@ -64,6 +74,7 @@ action: filter
 action_reason: "Essential oils are flagged due to lack of evidence for hair growth efficacy."
 
 ---
+# Graying/Greying
 type: submission
 moderators_exempt: true
 body+title (includes): ["reverse grey ", "reverse gray", "reversing grey", "reversing gray", "going grey", "going gray", "grey hair", "gray hair", "greying", "graying", "greys", "grays", "grey hair reversal", "gray hair reversal", " gray ", " grey "]
@@ -71,6 +82,7 @@ action: filter
 comment: "We noticed you may be asking about greying hair. Unfortunately, this is usually related to genetics. If you think it may be a bigger issue, see a doctor."
 
 ---
+# Medical
 type: any
 moderators_exempt: true
 body+title (includes): ["dandruff", "flake", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm", "scalp infection", "fungal scalp", "ketoconazole"]
@@ -78,12 +90,14 @@ action: filter
 action_reason: "Dandruff and scalp infections are medical issues. Please consult a doctor."
 
 ---
+# Moisture
 type: submission
 moderators_exempt: true
 body+title (includes): ["moisture", "moisturize", "moisturizing"]
 action: filter
 action_reason: "Filtered for moisture-related topic. Refer to subreddit rules."
 ---
+# Chemophobia
 type: any
 moderators_exempt: true
 body+title (includes): ["sulfate-free", "sulfate free", "harmful ingredient", "cocamidopropyl", "formaldehyde", "parabens", "SLS", "SLES"]
@@ -91,12 +105,14 @@ action: filter
 action_reason: "Ingredient concerns flagged. Please note this subreddit discourages chemophobia without evidence."
 
 ---
+# Hard Water 2
 type: comment
 moderators_exempt: true
 body (includes): ["hard water", "soft water", "water hardness", "water softener", "tap water", "filtered water", "chlorine", "fluoride", "lime scale", "shower filter", "water filter", "pH balance in water", "calcium buildup", "mineral deposits", "well water", "water damage", "dry hair from water", "greasy hair from water"]
 comment: "We noticed you mentioned water quality. Please do not recommend infrastructure solutions to hard water like softeners or filters, as water quality is a local infrastructure topic, not a haircare topic."
 
 ---
+# REP
 type: comment
 moderators_exempt: true
 author:
@@ -105,6 +121,7 @@ action: filter
 action_reason: "check if quality comment or just advertisement"
 
 ---
+# MLM
 type: any
 body (includes): ["Monat", "arbonne", "itworks", "nuskin", "essential oils", "young living"]
 action: remove
