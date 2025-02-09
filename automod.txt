@@ -2,9 +2,13 @@
 type: link submission
 url (includes-word, regex): ['[\.=](jpe?g|png|gif|webp)', 'i\.redd\.it', 'reddit\.com/gallery/', 'imgur\.com', 'ibb\.co', 'prnt\.sc', 'postimg\.cc', 'imgbox\.com', 'imageupload\.io', 'instagram\.com', 'instagr\.am', 'fbcdn\.net', '(flickr\.com|flic.kr)', 'giphy\.com', 'gfycat\.com', 'media\.tumblr\.com']
 set_spoiler: true
+action: filter
+message: "Hi, your photo submission is under review. If it complies with our rules it will be approved. Please review our rules especially 2, 8, and 10"
 ---
 type: gallery submission
 set_spoiler: true
+action: filter
+message: "Hi, your photo submission is under review. If it complies with our rules it will be approved. Please review our rules especially 2, 8, and 10"
 ---
 type: submission
 author:
