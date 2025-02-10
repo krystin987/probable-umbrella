@@ -59,13 +59,6 @@ comment: "We noticed you may be asking about hair loss or thinning. Posts about 
 action: remove
 action_reason: "bald/thinning"
 ---
-# Hard Water
-type: submission
-moderators_exempt: true
-body+title (includes): ["hard water", "soft water", "water hardness", "water softener", "tap water", "filtered water", "chlorine", "fluoride", "lime scale", "shower filter", "water filter", "pH balance in water", "calcium buildup", "mineral deposits", "well water", "water damage", "dry hair from water", "greasy hair from water"]
-comment: "We noticed you mentioned water quality. Please do not recommend infrastructure solutions to hard water like softeners or filters, as water quality is a local infrastructure topic, not a haircare topic."
-
----
 # Essential Oils
 type: any
 moderators_exempt: true
@@ -104,13 +97,6 @@ moderators_exempt: true
 body+title (includes): ["sulfate-free", "sulfate free", "harmful ingredient", "cocamidopropyl", "formaldehyde", "parabens", "SLS", "SLES"]
 action: filter
 action_reason: "Ingredient concerns flagged. Please note this subreddit discourages chemophobia without evidence."
-
----
-# Hard Water 2
-type: comment
-moderators_exempt: true
-body (includes): ["hard water", "soft water", "water hardness", "water softener", "tap water", "filtered water", "chlorine", "fluoride", "lime scale", "shower filter", "water filter", "pH balance in water", "calcium buildup", "mineral deposits", "well water", "water damage", "dry hair from water", "greasy hair from water"]
-comment: "We noticed you mentioned water quality. Please do not recommend infrastructure solutions to hard water like softeners or filters, as water quality is a local infrastructure topic, not a haircare topic."
 
 ---
 # REP
