@@ -39,7 +39,7 @@ comment: "We noticed you may be asking a question about taking supplements. Curr
 # Advice
 type: submission
 moderators_exempt: true
-title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help", "recommend", "bad", "ok", "okay", "treatment", "opinion", "keratin", "k18", "friz", "wrong", "problem", "my hair", "normal", "frustrated", "lighten my", "trim my", "should I", "olaplex"]
+title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help", "recommend", "bad", "ok", "okay", "treatment", "opinion", "keratin", "k18", "friz", "wrong", "problem", "my hair", "normal", "frustrated", "lighten my", "trim my", "should I", "olaplex", "is this", "struggling", "tangled", "how do I", "why do I", "feeling", "looks", "should I", "stop my hair", "from looking", "crazy"]
 action: filter
 comment: "Please post requests for personal advice in the weekly haircare megathread. Simply go back to the mainpage and filter by 'hot' and it should be the top stickied post."
 
