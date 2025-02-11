@@ -39,9 +39,17 @@ comment: "We noticed you may be asking a question about taking supplements. Curr
 # Advice
 type: submission
 moderators_exempt: true
-title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help", "recommend", "bad", "ok", "okay", "treatment", "opinion", "keratin", "k18", "friz", "wrong", "problem", "my hair", "normal", "frustrated", "lighten my", "trim my", "should I", "olaplex", "is this", "struggling", "tangled", "how do I", "why do I", "feeling", "looks", "should I", "stop my hair", "from looking", "crazy"]
+title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help", "recommend", "bad", "ok", "okay", "treatment", "opinion", "keratin", "k18", "friz", "wrong", "problem", "my hair", "normal", "frustrated", "lighten my", "trim my", "should I", "olaplex", "is this", "struggling", "tangled", "how do I", "why do I", "feeling", "looks", "should I", "stop my hair", "from looking", "crazy", "on my"]
 action: filter
-comment: "Please post requests for personal advice in the weekly haircare megathread. Simply go back to the mainpage and filter by 'hot' and it should be the top stickied post."
+comment: "Your post has been filtered as it may be a request for advice. If it is not, our moderators will approve it. Please post requests for personal advice in the weekly haircare megathread. Simply go back to the mainpage and filter by 'hot' and it should be the top stickied post."
+
+---
+# Products
+type: submission
+moderators_exempt: true
+title (includes): ["need products", "find", "buy", "purchase", "review", "recommend", "recommendation", "looking for", "any good", "suggestions", "bought"]
+action: filter
+comment: "Your post has been filtered as it may be a request for product reviews/advice, which is outside the scope of our subreddit. If it is not, our moderators will approve it."
 
 ---
 # Protein Overload
@@ -78,7 +86,7 @@ comment: "We noticed you may be asking about greying hair. Unfortunately, this i
 # Medical
 type: any
 moderators_exempt: true
-body+title (includes): ["dandruff", "flake", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm", "scalp infection", "fungal scalp", "ketoconazole", "itching", "psoriasis", "candida", "eczema", "scalp pain", "lesions", "bumps", "flakiness", "prescription", "itchiness", "alopecia"]
+body+title (includes): ["dandruff", "flake", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm", "scalp infection", "fungal scalp", "ketoconazole", "itching", "psoriasis", "candida", "eczema", "scalp pain", "lesions", "bumps", "flakiness", "prescription", "itchiness", "alopecia", "accutane"]
 action: filter
 action_reason: "Dandruff and scalp infections are medical issues. Please consult a doctor."
 message: "Hello, we noticed you are posting about potential medical issues. We hold these posts for manual review. If it does not break any rules we will approve it."
