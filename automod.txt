@@ -39,7 +39,7 @@ comment: "We noticed you may be asking a question about taking supplements. Curr
 # Advice
 type: submission
 moderators_exempt: true
-title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help", "recommend", "bad", "ok", "okay", "treatment", "opinion", "keratin", "k18", "friz", "wrong", "problem", "my hair", "normal", "frustrated", "lighten my", "trim my", "should I", "olaplex", "is this", "struggling", "tangled", "how do I", "why do I", "feeling", "looks", "should I", "stop my hair", "from looking", "crazy", "on my"]
+title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help", "recommend", "bad", "ok", "okay", "treatment", "opinion", "keratin", "k18", "friz", "wrong", "problem", "my hair", "normal", "frustrated", "lighten my", "trim my", "should I", "olaplex", "is this", "struggling", "tangled", "how do I", "why do I", "feeling", "looks", "should I", "stop my hair", "from looking", "crazy"]
 action: filter
 comment: "Your post has been filtered as it may be a request for advice. If it is not, our moderators will approve it. Please post requests for personal advice in the weekly haircare megathread. Simply go back to the mainpage and filter by 'hot' and it should be the top stickied post."
 
@@ -67,12 +67,15 @@ comment: "We noticed you may be asking about hair loss or thinning. Posts about 
 action: remove
 action_reason: "bald/thinning"
 ---
-# Essential Oils
+# Hair Growth Oils
 type: any
 moderators_exempt: true
-body+title (includes): ["jojoba", "rosemary", "ginseng", "castor", "essential oil", "argan oil", "tea tree oil", "peppermint oil"]
+body+title: ["jojoba", "rosemary", "ginseng", "castor", "essential", "argan", "tea tree", "peppermint"]
+body+title#2: ["growth", "thick"]
+~body+title#3: ["springer.com", "sciencedirect.com", "jstor.org", "nature.com", "wiley.com", "tandfonline.com", "researchgate.net", "arxiv.org", "pubmed.ncbi.nlm.nih.gov", "thebeautybrains.com", "labmuffin.com", "science-yhairblog"]
 action: filter
-action_reason: "Essential oils are flagged due to lack of evidence for hair growth efficacy."
+action_reason: "Hair growth oils"
+message: "Hi your {{kind}} has been filtered due to discussion of the use of hair oils to promote hair growth. As most of the claims about these oils for hair growth is pseudoscientific, we filter such posts. If your {{kind}} does not violate our rules, it will be approved."
 
 ---
 # Graying/Greying
@@ -86,18 +89,11 @@ comment: "We noticed you may be asking about greying hair. Unfortunately, this i
 # Medical
 type: any
 moderators_exempt: true
-body+title (includes): ["dandruff", "flake", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm", "scalp infection", "fungal scalp", "ketoconazole", "itching", "psoriasis", "candida", "eczema", "scalp pain", "lesions", "bumps", "flakiness", "prescription", "itchiness", "alopecia", "accutane"]
+body+title (includes): ["dandruff", "flake", "flaking", "seborrheic", "dermatitis", "seborrheic dermatitis", "sebderm", "scalp infection", "fungal scalp", "ketoconazole", "itching", "psoriasis", "candida", "eczema", "scalp pain", "lesions", "bumps", "flakiness", "prescription", "itchiness", "alopecia", "accutane", "odor", "infection", "medicated"]
 action: filter
 action_reason: "Dandruff and scalp infections are medical issues. Please consult a doctor."
 message: "Hello, we noticed you are posting about potential medical issues. We hold these posts for manual review. If it does not break any rules we will approve it."
 
----
-# Moisture
-type: submission
-moderators_exempt: true
-body+title (includes): ["moisture", "moisturize", "moisturizing"]
-action: filter
-action_reason: "Filtered for moisture-related topic. Refer to subreddit rules."
 ---
 # Chemophobia
 type: any
@@ -127,3 +123,5 @@ type: link submission
 url (regex): ["\\?ref=", "&utm_", "\\.php\\?id="]
 action: remove
 action_reason: "Possible affiliate or tracking link detected."
+
+
