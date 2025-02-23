@@ -44,19 +44,35 @@ modmail: The above {{kind}} by /u/{{author}} has received 3 reports. Please inve
 # Advice
 type: submission
 moderators_exempt: true
-title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help", "recommend", "bad", "ok", "okay", "treatment", "opinion", "wrong", "problem", "my hair", "normal", "frustrated", "lighten my", "trim my", "should I", "is this", "struggling", "tangled", "how do I", "why do I", "feeling", "looks", "should I", "stop my hair", "from looking", "crazy", "perm", "straighten"]
+title (includes): ["advise", "advice", "thoughts", "routine", "journey", "help", "recommend", "bad", "ok", "okay", "treatment", "opinion", "wrong", "problem", "my hair", "normal", "frustrated", "lighten my", "trim my", "should I", "is this", "struggling", "tangled", "how do I", "why do I", "feeling", "looks", "should I", "stop my hair", "from looking", "crazy", "perm", "straighten", "color", "style", "his hair", "husband", "boyfriend", "her hair", "daughter", "son", "suggest"]
 author:
   ~flair_text (regex): ".+"
 action: remove
-comment: "Your post has been removed as it may be a request for advice. If it is not, please DM the moderators. Please post requests for personal advice in the weekly haircare megathread. Simply go back to the mainpage and filter by 'hot' and it should be the top stickied post."
+comment: "Your post has been removed as it may be a request for advice. Please post requests for personal advice in the weekly haircare megathread. Simply go back to the mainpage and filter by 'hot' and it should be the top stickied post.
 
+If you want to ask a scientific question, please create a new post asking the question directly. For example instead of 'I noticed my hair is brittle could it be protein' ask 'can protein make hair more brittle'"
+action_reason: "advice"
 ---
 # Products
 type: submission
 moderators_exempt: true
-title (includes): ["need products", "find", "buy", "purchase", "review", "recommend", "recommendation", "looking for", "any good", "suggestions", "bought"]
+title (includes): ["need products", "find", "buy", "purchase", "review", "recommend", "recommendation", "looking for", "any good", "suggestions", "bought", "search for", "perfect", "best", "good"]
+author:
+  ~flair_text (regex): ".+"
 action: remove
 message: "Your post has been removed as it may be a request for product reviews/advice, which is outside the scope of our subreddit. If it is not, please DM the moderators."
+action_reason: "product recs"
+
+---
+# Color/style
+type: submission
+moderators_exempt: true
+title (includes): ["highlights", "toner", "balayage", "brushed", "bangs", "toner", "flat", "gloss", "heatless", "style", "bonnet", "clips", "cowlick", "haircut", "blonde"]
+author:
+  ~flair_text (regex): ".+"
+action: remove
+message: "Your post has been removed as keywords indicate it is a personal coloring/styling question. If it is not, please DM the moderators."
+action_reason: "color/style"
 
 ---
 # Hair loss
@@ -72,7 +88,7 @@ action_reason: "bald/thinning"
 # Hair Growth Oils
 type: any
 moderators_exempt: true
-body+title: ["jojoba", "rosemary", "ginseng", "castor", "essential", "argan", "tea tree", "peppermint"]
+body+title: ["jojoba", "rosemary", "ginseng", "castor", "essential", "argan", "tea tree", "peppermint", "oiling"]
 body+title#2: ["growth", "thick"]
 ~body+title#3: ["springer.com", "sciencedirect.com", "jstor.org", "nature.com", "wiley.com", "tandfonline.com", "researchgate.net", "arxiv.org", "pubmed.ncbi.nlm.nih.gov", "thebeautybrains.com", "labmuffin.com", "science-yhairblog"]
 action: filter
@@ -101,6 +117,8 @@ action: filter
 author:
   ~flair_text (regex): ".+"
 action_reason: "Ingredient concerns flagged. Please note this subreddit discourages chemophobia without evidence."
+message: "Hi your {{kind}} has been filtered due to discussion of sulfates. As most of the claims about these ingredients is pseudoscientific, we filter such posts. If your {{kind}} does not violate our rules, it will be approved."
+
 
 ---
 # REP
@@ -132,6 +150,18 @@ type: submission
 moderators_exempt: true
 body+title (includes): ["reverse grey ", "reverse gray", "reversing grey", "reversing gray", "going grey", "going gray", "grey hair", "gray hair", "greying", "graying", "greys", "grays", "grey hair reversal", "gray hair reversal", " gray ", " grey "]
 action: filter
+action_reason: "Greying"
 author:
   ~flair_text (regex): ".+"
 message: "We noticed you may be asking about greying hair. Unfortunately, this is usually related to genetics. If you think it may be a bigger issue, see a doctor. Your post will be filtered and only approved if it complies with our rules."
+
+---
+type: submission  
+body+title(regex): ["my.*?hair", "my.*?scalp", "my.*?head"]
+action: remove
+action_reason: "My hair/my scalp"
+author:
+  ~flair_text (regex): ".+"
+message: "Your post has been removed as it may be a request for personal advice/product recommendations. Please post requests for personal advice in the weekly haircare megathread. Simply go back to the mainpage and filter by 'hot' and it should be the top stickied post.
+
+If you want to ask a scientific question, please create a new post asking the question directly. For example instead of 'I noticed my hair is brittle could it be protein' ask 'can protein make hair more brittle'"  
